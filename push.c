@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 09:22:33 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/13 14:13:44 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/09/16 15:25:25 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,32 +30,40 @@ void	add_top(t_lst **node, int data)
 	}
 }
 
-void	pa(t_lst **a, t_lst **b, int data)
+void    pa(t_lst **a, t_lst **b, int data)
 {
-	t_lst *new_node;
-
-	new_node = (t_lst*)malloc(sizeof(t_lst));
-	new_node->data = data;
-	new_node->next = (*a);
-	(*a) = new_node;
-	if ((*b)->next)
-		delete_node(*b);
-	else
-		*b = NULL;
+    t_lst    *head;
+    head = (t_lst*)malloc(sizeof(t_lst));
+    head->data = data;
+    head->next = (*a);
+    (*a) = head;
+    if ((*b)->next)
+    {
+        delete_node(*b);
+    }
+    else
+    {
+        free(*b);
+        *b = NULL;
+    }
 }
 
-void	pb(t_lst **b, t_lst **a, int data)
+void    pb(t_lst **a, t_lst **b, int data)
 {
-	t_lst *new_node;
-
-	new_node = (t_lst*)malloc(sizeof(t_lst));
-	new_node->data = data;
-	new_node->next = (*b);
-	(*b) = new_node;
-	if ((*a)->next)
-		delete_node(*a);
-	else
-		*a = NULL;
+    t_lst    *head;
+    head = (t_lst*)malloc(sizeof(t_lst));
+    head->data = data;
+    head->next = (*b);
+    (*b) = head;
+    if ((*a)->next)
+    {
+        delete_node(*a);
+    }
+    else
+    {
+        free(*a);
+        (*a) = NULL;
+    }
 }
 
 void	ra(t_lst **a)

@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 09:16:07 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/13 09:53:15 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/09/16 09:34:43 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	sa(t_lst *stack)
 	int *b;
 	int temp;
 
+	//ft_putendl("here");
 	if (stack->next == NULL)
 		return ;
 	a = &stack->data;
@@ -33,6 +34,7 @@ void	sb(t_lst *stack)
 	int *b;
 	int temp;
 	
+//	ft_putendl("here");
 	if (stack->next == NULL)
 		return ;
 	a = &stack->data;	

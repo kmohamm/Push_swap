@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 11:03:03 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/13 15:52:23 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/16 15:06:31 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef	struct		s_data
 }					t_data;
 
 int					is_sorted(t_lst *a);
+t_lst				*create(int n);
 int					ft_lstlen(t_lst *a);
 void				sa(t_lst *stack);
 void				sb(t_lst *stack);

@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 11:53:56 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/13 09:49:45 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/09/16 15:43:37 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,18 @@ void	sort_4(t_lst *head, t_lst *box)
 {
 	int minimum;
 
-	head = head;
+//	head = head;
 	minimum = 0;
 	minimum = min(head);
 	if (minimum == head->data)
 	{
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("pb");
 	}
 	else if (minimum == head->next->data)
 	{
 		sa(head);
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("sa");
 		ft_putendl("pb");
 	}
@@ -75,7 +75,7 @@ void	sort_4(t_lst *head, t_lst *box)
 	{
 		rra(&head);
 		rra(&head);
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("rra");
 		ft_putendl("rra");
 		ft_putendl("pb");
@@ -83,7 +83,7 @@ void	sort_4(t_lst *head, t_lst *box)
 	else if (minimum == head->next->next->next->data)
 	{
 		rra(&head);
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("rra");
 		ft_putendl("pb");
 	}
@@ -97,19 +97,19 @@ void	sort_5(t_lst *head, t_lst *box)
 	int minimum;
 	int count;
 
-	head = head;
+	//head = head;
 	minimum = 0;
 	count = 0;
 	minimum = min(head);
 	if (minimum == head->data)
 	{
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("pb");
 	}
 	else if (minimum == head->next->data)
 	{
 		sa(head);
-		pb(&box, &head, head->data);
+		pb(&head, &box, head->data);
 		ft_putendl("sa");
 		ft_putendl("pb");
 	}
@@ -117,7 +117,7 @@ void	sort_5(t_lst *head, t_lst *box)
 	{
 		ra(&head);
 		sa(head);
-		pb(&box, &head, head->data);
+		pb(&head, &box, head->data);
 		ft_putendl("ra");
 		ft_putendl("sa");
 		ft_putendl("pb");
@@ -126,7 +126,7 @@ void	sort_5(t_lst *head, t_lst *box)
 	{
 		rra(&head);
 		rra(&head);
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("rra");
 		ft_putendl("rra");
 		ft_putendl("pb");
@@ -134,7 +134,7 @@ void	sort_5(t_lst *head, t_lst *box)
 	else if (minimum == head->next->next->next->next->data)
 	{
 		rra(&head);
-		pb(&box, &head, head->data);
+		pb(&head, &box,  head->data);
 		ft_putendl("rra");
 		ft_putendl("pb");
 	}

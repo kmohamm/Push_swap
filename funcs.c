@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   funcs.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 08:52:26 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/13 16:29:09 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/16 14:52:53 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,25 +69,13 @@ void	print(t_lst *struct_a, t_lst *struct_b)
 	}
 }
 
-int		main(int argc, char **argv)
+t_lst	*create(int n)
 {
-	t_data m;
-	
-	if (is_valid(argc, argv) == 0)
-	{
-		ft_putendl("Error");
-		return (0);
-	}
-	else
-	{
-		m.a = kmohamma(argc, argv);
-		if (is_sorted(m.a) == 1)
-		{
-			return (0);
-		}
-		sort_3(&m.a);
-		//sort_5(m.a, m.b);
-	}
-	print(m.a, m.b);
-	return (0);
+	t_lst	*ret;
+
+	ret = malloc(sizeof(t_lst));
+	ret->data = n;
+	ret->next = NULL;
+	return (ret);
 }
+
