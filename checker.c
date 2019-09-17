@@ -6,31 +6,30 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 15:32:25 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/16 15:54:52 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:21:12 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "header.h"
 
-int     main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-    t_data m;
-	int    i;
-    
+	t_data m;
+	int		i;
+	t_lst	*tmp;
+	char	*line_store;
+
 	i = 0;
-	t_lst *tmp;
-	char *line_store;
-    
-    if (is_valid(argc, argv) == 0)
-    {
-        ft_putendl("Error");
-        return (0);
-    }
-    else
-    {
-        m.a = kmohamma(argc, argv);
-    }
+	if (is_valid(argc, argv) == 0)
+	{
+		ft_putendl("Error");
+		return (0);
+	}
+	else
+	{
+		m.a = kmohamma(argc, argv);
+	}
 	tmp = m.a;
 	while (get_next_line(0, &line_store))
 	{
@@ -44,7 +43,7 @@ int     main(int argc, char **argv)
 		{
 			tmp = tmp->next;
 		}
-        i++;
+		i++;
 	}
 	if (is_sorted(m.a) == 1)
 	{
@@ -54,8 +53,6 @@ int     main(int argc, char **argv)
 	{
 		ft_putendl("KO");
 	}
-    print(m.a, m.b);
-    return (0);
+	print(m.a, m.b);
+	return (0);
 }
-
-

@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 08:52:26 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/16 14:52:53 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:15:08 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 t_lst	*kmohamma(int argc, char **argv)
 {
-	t_data v;
-	t_lst *n1;
+	t_data	v;
+	t_lst	*n1;
 
 	v.i = 1;
 	v.head = NULL;
@@ -78,4 +78,3 @@ t_lst	*create(int n)
 	ret->next = NULL;
 	return (ret);
 }
-
