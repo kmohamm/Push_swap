@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 14:28:01 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/17 09:05:02 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/18 16:34:10 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		main(int argc, char **argv)
 				sort_5(m.a, m.b);
 		}
 	}
-	//print(m.a, m.b);
+	print(m.a, m.b);
 	//sleep(30);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 15:24:51 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/17 08:25:25 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/18 16:37:34 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int		store_instruction(t_lst *a, t_lst *b, char *line_store)
 	}
 	else if (ft_strcmp("pa", line_store) == 0)
 	{
-		pa(&b, &a, b->data);
+		if (b != NULL)
+			pa(&b, &a, b->data);
 		return (1);
 	}
 	else if (ft_strcmp("pb", line_store) == 0)
