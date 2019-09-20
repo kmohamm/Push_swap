@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 11:03:03 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/16 15:06:31 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/20 16:27:32 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ t_lst				*kmohamma(int argc, char **argv);
 int					get_next_line(const int fd, char **line);
 void    			print(t_lst *struct_a, t_lst *struct_b);
 int    				store_instruction(t_lst *a, t_lst *b, char *instr);
+void    			print_list(t_lst *head);
 
 #endif

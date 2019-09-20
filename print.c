@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 08:33:28 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/16 15:02:30 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/20 16:25:28 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ void    print(t_lst *struct_a, t_lst *struct_b)
             temp2 = temp2->next;
         }
         ft_putchar('\n');
+    }
+}
+
+void    print_list(t_lst *head)
+{
+    while (head)
+    {
+        ft_putnbr(head->data);
+        ft_putchar('\n');
+        head = head->next;
     }
 }
 

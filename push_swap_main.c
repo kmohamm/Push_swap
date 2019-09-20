@@ -6,7 +6,7 @@
 /*   By: kmohamma <kmohamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 14:28:01 by kmohamma          #+#    #+#             */
-/*   Updated: 2019/09/18 16:34:10 by kmohamma         ###   ########.fr       */
+/*   Updated: 2019/09/20 16:30:13 by kmohamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int		main(int argc, char **argv)
 {
 	t_data m;
+	
 
 	if (is_valid(argc, argv) == 0)
 	{
@@ -23,7 +24,13 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		m.a = kmohamma(argc, argv);
+	 	m.a = kmohamma(argc, argv);
+	//	print(m.a, m.b);
+		 
+		// pb(&m.a, &m.b, m.a->data);
+		// pb(&m.a, &m.b, m.a->data);
+		// pb(&m.a, &m.b, m.a->data);
+		// pa(&m.a, &m.b, m.b->data);
 		if (is_sorted(m.a) == 1)
 		{
 			ft_putendl(ft_itoa(is_sorted(m.a)));
@@ -52,7 +59,7 @@ int		main(int argc, char **argv)
 				sort_5(m.a, m.b);
 		}
 	}
-	print(m.a, m.b);
+//	print_list(m.a);
 	//sleep(30);
 	return (0);
 }
